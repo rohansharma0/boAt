@@ -30,6 +30,7 @@ const ProductDetails = ({ product, products }) => {
 					<div className="small-images-container">
 						{image?.map((item, i) => (
 							<img
+								key={i}
 								src={urlFor(item)}
 								className={
 									i === index
@@ -56,7 +57,7 @@ const ProductDetails = ({ product, products }) => {
 					</div>
 					<h4>Details: </h4>
 					<p>{details}</p>
-					<p className="price">${price}</p>
+					<p className="price">₹{price}</p>
 					<div className="quantity">
 						<h3>Quantity:</h3>
 						<p className="quantity-desc">
